@@ -1,4 +1,6 @@
+// src/components/AddCourseForm.js
 import React, { useState } from 'react';
+import { capitalizeWords } from '../utils'; // Import the utility function
 
 const AddCourseForm = ({ addCourse, allTags }) => {
   const [title, setTitle] = useState('');
@@ -8,7 +10,11 @@ const AddCourseForm = ({ addCourse, allTags }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addCourse({ title, platform, tags });
+    addCourse({
+      title: capitalizeWords(title), // Apply capitalization
+      platform: capitalizeWords(platform), // Apply capitalization
+      tags: tags.map(tag => capitalizeWords(tag)), // Apply capitalization to each tag
+    });
     setTitle('');
     setPlatform('');
     setTags([]);
@@ -17,7 +23,7 @@ const AddCourseForm = ({ addCourse, allTags }) => {
 
   const handleAddTag = () => {
     if (tagInput && !tags.includes(tagInput)) {
-      setTags([...tags, tagInput]);
+      setTags([...tags, capitalizeWords(tagInput)]); // Apply capitalization
       setTagInput('');
     }
   };
@@ -27,7 +33,7 @@ const AddCourseForm = ({ addCourse, allTags }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="add-course-form p-6 m-4 border rounded-lg shadow-md bg-gray-50 max-w-lg">
+    <form onSubmit={handleSubmit} className="add-course-form p-6 m-4 border rounded-lg shadow-md bg-gray-50 max-w-lg w-full">
       <div className="mb-4">
         <label className="block text-gray-700 text-sm font-bold mb-2">Course Title</label>
         <input

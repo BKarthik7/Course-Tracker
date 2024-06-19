@@ -1,3 +1,4 @@
+// src/App.js
 import React, { useState, useEffect } from 'react';
 import CourseList from './components/CourseList';
 import AddCourseForm from './components/AddCourseForm';
@@ -31,10 +32,10 @@ function App() {
   });
 
   return (
-    <div className="App container mx-auto p-4">
+    <div className="App container mx-auto p-4 flex flex-col items-center">
       <h1 className="text-3xl font-bold mb-4 text-gray-800 text-center">Course Tracker</h1>
       <AddCourseForm addCourse={addCourse} allTags={Array.from(allTags)} />
-      <div className="flex justify-between">
+      <div className="flex justify-between w-full max-w-lg">
         <FilterBar setFilter={setPlatformFilter} />
         <TagFilterBar setTagFilter={setTagFilter} allTags={Array.from(allTags)} /> {/* Pass allTags here */}
       </div>
