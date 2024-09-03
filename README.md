@@ -1,14 +1,14 @@
-# Course Tracker
+# 📖Course Tracker
 
 **Course Tracker** is a web application designed to help users track and manage their courses effectively. This project was built using React, JavaScript, and Supabase, offering a smooth and user-friendly interface.
 
-## Features
+## 🚀Features
 
 - **Course Management**: Add courses with ease.
 - **Tagging System**: Organize your courses by adding relevant tags.
 - **Responsive Design**: Works seamlessly across different devices.
 
-## Installation
+## 🛠️Installation
 
 To get started with the Course Tracker, follow these steps:
 
@@ -30,7 +30,7 @@ npm start
 ```
 5. **Open your browser and go to** http://localhost:3000 **to view the app**.
 
-## Screenshots
+## 📸Screenshots
 <img src="https://github.com/user-attachments/assets/add8b492-799b-4c9b-8f5b-2323c0b196de" width="400" >
 <img src="https://github.com/user-attachments/assets/87c82aa4-8aaa-424b-8627-566d46787031" width="400" >
 
