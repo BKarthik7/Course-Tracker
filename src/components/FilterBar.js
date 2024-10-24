@@ -2,7 +2,7 @@
 import React from 'react';
 
 const FilterBar = ({ setFilter }) => {
-  const platforms = ['All', 'Udemy', 'Coursera'];
+  const platforms = ['Udemy', 'Coursera', 'Youtube', 'All'];
 
   return (
     <div className="filter-bar flex justify-center my-4">
