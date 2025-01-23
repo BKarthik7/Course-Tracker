@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+/* Add this in your CSS file (e.g., index.css or a specific component stylesheet) */
+@keyframes scrollTags {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.tags-wrapper {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollTags 15s linear infinite;
+}
+
+.course-item .overflow-hidden {
+  position: relative;
+  width: 100%;
+}
